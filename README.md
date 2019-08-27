@@ -1,21 +1,15 @@
 <!-- Source: https://github.com/MattIPv4/template/blob/master/README.md -->
 
 <!-- Title -->
-<h1 align="center" id="Template">
-    <!-- Text only -->
-    <!-- Template -->
-    <!-- or, Image logo -->
-    <img src="https://via.placeholder.com/500x60.png?text=Template" alt="Template" width="500"/>
+<h1 align="center" id="status-screamer">
+    Status Screamer
 </h1>
 
 <!-- Tag line -->
-<h3 align="center">The template README (and other files) for my GitHub repositories.</h3>
+<h3 align="center">A little Python bot that continually screams in Discord to let you know it's alive.</h3>
 
 <!-- Badges -->
 <p align="center">
-    <a href="https://shields.io/" target="_blank">
-        <img src="https://img.shields.io/badge/style-flat--square-green.svg?style=flat-square" alt="Style"/>
-    </a>
     <a href="http://patreon.mattcowley.co.uk/" target="_blank">
         <img src="https://img.shields.io/badge/patreon-IPv4-blue.svg?style=flat-square" alt="Patreon"/>
     </a>
@@ -27,9 +21,16 @@
 ----
 
 <!-- Content -->
-## Hello
+## Screaming
 
-This repository stores my template README file along with other useful default & template files for my GitHub repositories.
+When I say it screams, it actually sends a new message whenever it starts up, and then edits a second "alive" message
+ every 30s.
+
+✅ **Started at `2019-08-27T11:04:22.488846`**\
+​  📶 Alive at `2019-08-27T11:08:57.073497`
+ 
+These two will allow you to determine the length of any downtime reliably.
+Simply find the difference between the timestamp in the last alive message and the next started message.
 
 <!-- Contributing -->
 ## Contributing

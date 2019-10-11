@@ -7,6 +7,7 @@ from io import TextIOWrapper
 
 import discord
 from discord.ext import tasks
+from discord.errors import NotFound
 
 from screamer.config import Config
 
@@ -45,6 +46,8 @@ class Screamer(discord.Client):
                 await self.scream_start()
             else:
                 await self.scream_message.edit(content=Screamer.scream_content())
+        except NotFound:
+            await self.scream_start()
         except Exception as e:
             print(e)
 

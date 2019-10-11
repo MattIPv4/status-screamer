@@ -6,8 +6,8 @@ from datetime import datetime
 from io import TextIOWrapper
 
 import discord
-from discord.ext import tasks
 from discord.errors import NotFound
+from discord.ext import tasks
 
 from screamer.config import Config
 

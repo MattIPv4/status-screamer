@@ -1,0 +1,17 @@
+[Unit]
+Description=Status Screamer
+After=syslog.target network.target
+
+[Service]
+User=root
+Group=root
+
+Restart=always
+RestartSec=30
+
+Type=idle
+WorkingDirectory=/root/status-screamer
+ExecStart=/usr/bin/python3 launch.py
+
+[Install]
+WantedBy=multi-user.target

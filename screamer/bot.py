@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 import logging
 import sys
+import socket
 from datetime import datetime
 from io import TextIOWrapper
 
@@ -36,7 +37,8 @@ class Screamer(discord.Client):
 
     async def scream_start(self):
         channel = await self.fetch_channel(self.config.channel)
-        await channel.send("\N{WHITE HEAVY CHECK MARK} **Started at `" + Screamer.timestamp() + "`**")
+        host = socket.gethostbyaddr(socket.gethostname())[0]
+        await channel.send("\N{INFORMATION SOURCE} `" + host + "`\n\N{WHITE HEAVY CHECK MARK} **Started at `" + Screamer.timestamp() + "`**")
         self.scream_message = await channel.send(Screamer.scream_content())
 
     @tasks.loop(seconds=15)

@@ -21,3 +21,4 @@ node_modules/
 
 # Custom
 screamer/config.py
+__pycache__/
